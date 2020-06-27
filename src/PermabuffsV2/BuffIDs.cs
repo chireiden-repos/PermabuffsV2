@@ -3,9 +3,9 @@ using Terraria.ID;
 
 namespace Permabuffs_V2
 {
-	public static class BuffIDs
-	{
-		private static List<int> NonPermanentBuffs = new List<int>
+    public static class BuffIDs
+    {
+        private static List<int> NonPermanentBuffs = new List<int>
         {
             BuffID.ShadowOrb,
             BuffID.FairyBlue,
@@ -57,6 +57,9 @@ namespace Permabuffs_V2
             BuffID.PetDD2Ghost,
             BuffID.PetDD2Dragon
         };
-		public static bool IsPermanent(this int buffID) => !NonPermanentBuffs.Contains(buffID);
-	}
+        public static bool IsPermanent(this int buffID)
+        {
+            return !NonPermanentBuffs.Contains(buffID);
+        }
+    }
 }
